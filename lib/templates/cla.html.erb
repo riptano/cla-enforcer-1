@@ -1,83 +1,192 @@
 <html>
-
 <head>
-<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-<style>
-body { 
-  font-size: 12px;
-  color: #222; 
-  background: #fff;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  margin: 20px;
-  line-height: 1.2;
-}
-h1,h2 { font-weight: normal; }
-h1    { font-size: 2.5em; margin-bottom: 1em; }
-h2    { font-size: 1.5em; margin-bottom: 0.75em; }
-p     { margin: 0 0 0.75em; }
-ul    { padding: 0; margin: 1em 0 1em 0; list-style-type: disc; }
-ul li { margin: 0 0 0.25em 2.5em; }
-dl    { margin: 0 0 1em 0; }
-dl dt { font-weight: bold; margin: 0 0 0.25em 0; }
-dd    { margin: 0 0 0.25em 1.5em; }
-table { margin: 1em 0 1em 0; width: 100%; }
-th    { font-weight: bold; text-align: right; }
-th,td { padding: 0 0.75em 0.25em 0.75em; margin: 0; font-size: 12px; }
-</style>
+  <title>Spark Connector Contribution Assignment Agreement</title>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <meta name="Author" content="DataStax Spark Connector CLA Enforcer">
+  <meta name="CreationTime" content="<%= Time.now.strftime('%Y%m%dT%H%M%S%z') %>">
+  <style type="text/css">
+    @page {
+      margin: 6em;
+
+      @bottom-center {
+        font-size: 1em;
+        content: counter(page) " of " counter(pages);
+      }
+    }
+
+    body {
+      font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      list-style: decimal inside;
+      counter-reset: section;
+      font-size: 8pt;
+      line-height: 1.2em;
+    }
+
+    em {
+      font-weight: bold;
+    }
+
+    h1 {
+      margin: 0.7em 0;
+      font-size: 1.2em;
+      text-align: center;
+    }
+
+    h2:before {
+      content: counter(section) ".\2003";
+      counter-increment: section;
+    }
+
+    h2 {
+      font-size: 1em;
+    }
+
+    section {
+      counter-reset: subsection;
+    }
+
+    dt:before {
+      content: counter(section) "." counter(subsection) "\2003" '"';
+      counter-increment: subsection;
+    }
+
+    dt:after {
+      content: '"';
+    }
+
+    dt {
+      float: left;
+      clear: both;
+      margin: 0 0.3em 0 0;
+    }
+
+    dd {
+      margin: 0 0 1em 0;
+    }
+
+    ol {
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+      margin-bottom: 1em;
+    }
+
+    li:before {
+      content: counter(section) "." counter(subsection) "\2003" '"';
+      counter-increment: subsection;
+    }
+
+    table {
+      font-size: 1em;
+    }
+
+    th {
+      text-align: right;
+    }
+  </style>
 </head>
-
 <body>
+<h1>Assignment Agreement</h1>
+<p>Last Updated: October 19, 2016</p>
+<p>This Assignment Agreement is entered between You and DataStax, Inc., a Delaware corporation having its principal place of business at 3975 Freedom Circle, #400 ("<em>DataStax</em>"). "<em>You</em>" means the copyright owner or legal entity authorized by the copyright owner that is making this assignment to DataStax.</p>
+<p><strong>THIS IS A LEGALLY BINDING DOCUMENT, SO PLEASE READ IT CAREFULLY BEFORE AGREEING TO IT.</strong></p>
+<section>
+  <h2>Definitions</h2>
 
-<h1>The Contribution License Agreement</h1>
+  <dl>
+    <dt>Contribution</dt>
+    <dd>means any work of authorship that was or is Submitted by You to DataStax in which You own or assert ownership of the Copyright.</dd>
 
-<h2>Preface</h2>
+    <dt>Copyright</dt>
+    <dd>means all rights protecting works of authorship owned or controlled by You, including copyright, moral and neighboring rights, as appropriate, for the full term of their existence including any extensions.</dd>
 
-<p>This Agreement is between You, the Users, the Contributors, and the Company. The intent of the Agreement is to clarify your responsibilities as a Contributor.</p>
+    <dt>Submit</dt>
+    <dd>means any form of electronic, verbal, or written communication that was or will be sent to DataStax or DataStax representatives, including but not limited to electronic mailing lists, source code control systems, and issue tracking systems that are managed by, or on behalf of, DataStax for the purpose of discussing and improving a Connector (as defined below), but excluding any communication that is conspicuously marked or otherwise designated in writing by You as "Not a Contribution."</dd>
+  </dl>
+</section>
 
-<p>The Agreement is meant to protect You, the Users, the Contributors, and the Company from the malicious misdeeds of others. The Agreement is <i>not</i> intended to restrict how You use Your own Contributions.</p>
+<section>
+  <h2>Background</h2>
+  <p>DataStax is a commercial enterprise that develops and distributes proprietary and non-proprietary software, including the Spark Cassandra® Connector (the "Connector") and provides associated services. You are the developer of the Contribution, and You would like DataStax to review Your Contribution and develop, distribute and support Your Contribution (or portions of it) as part of a Connector. DataStax is willing to review Your Contribution and may decide to include it in the Connector code base, but only if it is clear that any portion of Your Contribution that DataStax elects to include in DataStax products or services is wholly owned by DataStax.</p>
+</section>
 
-<h2>Definitions</h2>
+<section>
+  <h2>Assignment to DataStax</h2>
 
-<dl>
-  <dt>Agreement</dt>
-  <dd>This document.</dd>
+  <ol>
+    <li>At the time the Contribution was or is Submitted, You assign to DataStax all right, title, and interest worldwide in all Copyright covering the Contribution.</li>
+    <li>To the extent that any of the rights in Section 3.1 cannot be assigned by You to DataStax, You grant to DataStax a perpetual, worldwide, exclusive, royalty-free, transferable, irrevocable license under such non-assigned rights, with rights to sublicense through multiple tiers of sublicensees, to practice such non-assigned rights, including, but not limited to, the right to reproduce, modify, display, perform and distribute the Contribution.</li>
+    <li>To the extent that any of the rights in Section 3.1 can neither be assigned by You to DataStax pursuant to Section 3.1 nor can be licensed by You to DataStax pursuant to 3.2, then You irrevocably waive and agree never to assert such rights against DataStax, any DataStax successor in interest, or any DataStax licensees, either direct or indirect.</li>
+  </ol>
+</section>
 
-  <dt>You / Your</dt>
-  <dd>The individual signing this Agreement.</dd>
+<section>
+  <h2>License to You</h2>
+  <p>Upon Your assignment of rights to DataStax pursuant to Section 3, DataStax immediately grants to You a perpetual, worldwide, non-exclusive, royalty-free, transferable, irrevocable license under such rights covering the Contribution, with rights to sublicense through multiple tiers of sublicensees, to reproduce, modify, display, perform and distribute the Contribution. The intention of the parties is that this license from DataStax to You will be as broad as possible and provide You with rights as similar as possible to the owner of the rights that You transferred to DataStax. This license back is limited to the Contribution and does not provide You any rights to the Connector.</p>
+</section>
 
-  <dt>Company</dt>
-  <dd>The company which manages the Projects.</dd>
+<section>
+  <h2>Patent License</h2>
+  <p>For patent claims including, without limitation, method, process, and apparatus claims which You own, control or have the right to grant, now or in the future, You grant to DataStax a perpetual, worldwide, non- exclusive, transferable, royalty-free, irrevocable patent license, with the right to sublicense these rights to multiple tiers of sublicensees, to make, have made, use, sell, offer for sale, import and otherwise transfer the Contribution and the Contribution in combination with the Connector (and portions of such combination). This license is granted only to the extent that the exercise of the licensed rights infringes such patent claims.</p>
+</section>
 
-  <dt>Project</dt>
-  <dd>Open source projects being managed by the Company.</dd>
+<section>
+  <h2>Outbound License</h2>
+  <p>Based on the grant of rights in Sections 3 and 4, if DataStax includes Your Contribution in the Connector, DataStax may license the Contribution under any terms or license we select, including copyleft, permissive, commercial, or proprietary licenses.</p>
+</section>
 
-  <dt>Contribution</dt>
-  <dd>Code, content, and ideas that are meant to be integrated into Projects.</dd>
+<section>
+  <h2>DataStax Rights</h2>
+  <p>You acknowledge that DataStax is not obligated to use Your Contribution as part of the Connector and may decide to include any Contribution DataStax considers appropriate. You agree that we may register a copyright in Your Contribution and exercise all ownership rights associated with it. You agree that neither You nor DataStax has any duty to consult with, or obtain the consent of, pay or render an accounting to the other for any use or distribution of Your Contribution.</p>
+</section>
 
-  <dt>Contributor</dt>
-  <dd>Those people and corporations that provide Contributions.</dd>
+<section>
+  <h2>Moral Rights</h2>
+  <p>If moral rights apply to the Contribution, to the maximum extent permitted by law, You waive and agree not to assert such moral rights against DataStax or any DataStax successor in interest, or any DataStax licensee, either direct or indirect.</p>
+</section>
 
-  <dt>User</dt>
-  <dd>Those people and companies which make use of the Projects.</dd>
-</dl>
+<section>
+  <h2>Your Representations</h2>
+  <p>You represent and warrant to DataStax that You (i) are not aware of any other entity, including Your employer, that has or will have any right, title, or interest in the Contribution, (ii) have not assigned, transferred, licensed, pledged, or otherwise encumbered the Contribution or agreed to do so, (iii) have full power and authority to enter into this Agreement and to make the assignment as provided in Section 3, (iv) are not aware of any violation, infringement or misappropriation of any third party’s rights (or any claim thereof) by the Contribution, and (v) You are over 18 years old, or if You are under the age of 18, Your parent or guardian has reviewed and will sign the Agreement for You.</p>
+</section>
 
-<h2>Licensing Agreement</h2>
+<section>
+  <h2>Warranty Disclaimer and Consequential Damages Waiver</h2>
+  <p>EXCEPT FOR THE EXPRESS WARRANTIES IN SECTION 8, THE CONTRIBUTION IS PROVIDED "AS IS." MORE PARTICULARLY, ALL EXPRESS OR IMPLIED WARRANTIES INCLUDING, WITHOUT LIMITATION, ANY IMPLIED WARRANTY OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT ARE EXPRESSLY DISCLAIMED BY YOU TO DATASTAX AND BY DATASTAX TO YOU. TO THE EXTENT THAT ANY SUCH WARRANTIES CANNOT BE DISCLAIMED, SUCH WARRANTY IS LIMITED IN DURATION TO THE MINIMUM PERIOD PERMITTED BY LAW.</p>
+  <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT WILL YOU OR DATASTAX BE LIABLE FOR ANY LOSS OF PROFITS, LOSS OF ANTICIPATED SAVINGS, LOSS OF DATA, INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL AND EXEMPLARY DAMAGES ARISING OUT OF THIS AGREEMENT REGARDLESS OF THE LEGAL OR EQUITABLE THEORY (CONTRACT, TORT, STATUTE, OR OTHERWISE) UPON WHICH THE CLAIM IS BASED.</p>
+</section>
 
-<p>When You provide a Contribution to a Project:</p>
+<section>
+  <h2>Attribution</h2>
+  <p>DataStax may publicly disclose Your participation as a Contributor to a Connector, including the fact that You have entered into this Agreement. DataStax agrees to undertake good faith efforts to reference by name each individual Contributor at a DataStax website and/or in the release notes for the Connector version(s) containing the applicable Contribution. Your sole and exclusive remedy for a DataStax breach of this Section 11 shall be, at DataStax’ election, either for DataStax to include a attribution note at a DataStax website referencing Your Contribution during the next scheduled revision of that website, or to include an attribution to You in the release notes of a subsequent version of the Connector that contains Your Contribution.</p>
+</section>
 
-<ul>
-  <li>You assert that the Contribution was authored by You.</li>
-  <li>You license that Contribution under the terms of the license of that Project.</li>
-  <li>You assert that You have the authority and are able to license Your Contribution under the license of that Project.</li>
-  <li>If Your employer has rights to intellectual property that You create which may include Your Contribution, then You assert that Your employer has granted You explicit permission to license the Contribution on behalf of Your employer.</li>
-</ul>
+<section>
+  <h2>Consideration</h2>
+  <p>By entering into this Agreement You acknowledge and agree that the attribution right set forth in Section 10 represents full and fair consideration for the rights that You have granted to DataStax under this Agreement.</p>
+</section>
 
-<p>Furthermore:</p>
+<section>
+  <h2>Miscellaneous</h2>
 
-<ul>
-  <li>You assert that You have the authority and are able to enter into this Agreement.</li>
-  <li>If You become aware of a problem with any of Your Contributions or with the fact that You have signed this Agreement, then You agree to inform the Company about the problem, without any undue delay.</li>
-</ul>
+  <ol>
+    <li>This Agreement will be governed by and construed in accordance with the laws of California excluding its conflicts of law provisions. Under certain circumstances, the governing law in this section might be superseded by the United Nations Convention on Contracts for the International Sale of Goods ("UN Convention") and the parties intend to avoid the application of the UN Convention to this Agreement and, thus, exclude the application of the UN Convention in its entirety to this Agreement.</li>
+    <li>This Agreement sets out the entire agreement between You and Us for Your Contributions to Us and overrides all other agreements or understandings, provided, however, that if You are an employee of DataStax, this Agreement does not modify or supersede Your other employment agreements with DataStax except to the extent those agreements specifically exclude the Contribution from intellectual property assigned to DataStax in connection with Your employment.</li>
+    <li>If You or We assign the rights or obligations received through this Agreement to a third party, as a condition of the assignment, that third party must agree in writing to abide by all the rights and obligations in the Agreement.</li>
+    <li>The failure of either party to require performance by the other party of any provision of this Agreement in one situation shall not affect the right of a party to require such performance at any time in the future. A waiver of performance under a provision in one situation shall not be considered a waiver of the performance of the provision in the future or a waiver of the provision in its entirety.</li>
+    <li>If any provision of this Agreement is found void and unenforceable, such provision will be replaced to the extent possible with a provision that comes closest to the meaning of the original provision and which is enforceable. The terms and conditions set forth in this Agreement shall apply notwithstanding any failure of essential purpose of this Agreement or any limited remedy to the maximum extent possible under law.</li>
+    <li>You agree to take any and all reasonable additional actions and to execute, acknowledge and deliver any and all documents that the other party may reasonably request in order to effect the intent and purposes of this Agreement, and the transactions contemplated within this Agreement.</li>
+  </ol>
+</section>
+
+<section>
+  <h2>Term</h2>
+  <p>This Agreement will remain in effect in perpetuity.</p>
+</section>
+
+<p>[ELECTRONICALLY SIGNED]</p>
 
 <table>
   <tr>
