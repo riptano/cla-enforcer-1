@@ -31,4 +31,10 @@ namespace :cla do
     require 'cla'
     puts CLA.github.missing(args['repository'])
   end
+
+  desc "Manually whitelist a given login"
+  task :complete, [:login] do |t, args|
+    require 'cla'
+    puts CLA.contributors.complete(args['login'])
+  end
 end

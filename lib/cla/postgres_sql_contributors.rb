@@ -50,5 +50,23 @@ module CLA
         @github.signature_complete(contributor.first[:login])
       end
     end
+
+    def complete(login)
+      if @table.where(login: login)
+               .update(status: 'Completed',
+                       updated_at: ::Time.now)
+               .zero?
+        @table.insert(
+          login: login,
+          name: 'Ignore',
+          email: 'Ignore',
+          company: 'Ignore',
+          status: 'Completed',
+          created_at: Time.now,
+          updated_at: Time.now
+        )
+      end
+      @github.signature_complete(login)
+    end
   end
 end
