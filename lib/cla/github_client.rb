@@ -124,6 +124,9 @@ module CLA
       @tagged_pulls.where(login: contributors).select(:login).each do |row|
         contributors.delete(row[:login])
       end
+      if @organization
+        contributors.reject! {|login| @octokit.organization_member?(@organization, login)}
+      end
 
       unless contributors.empty?
         issue = @octokit.create_issue(repo, agreement_name,
