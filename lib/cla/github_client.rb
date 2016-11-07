@@ -104,6 +104,10 @@ module CLA
         contributors.delete(row[:login])
       end
 
+      if @organization
+        contributors.reject! {|login| @octokit.organization_member?(@organization, login)}
+      end
+
       contributors.map {|login| "@#{login}"}
     end
 
