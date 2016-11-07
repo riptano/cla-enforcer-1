@@ -1,7 +1,8 @@
 module CLA
   class GithubClient
-    def initialize(octokit, tagged_pulls, contributors, hostname, github_hostname, github_verifier, label_name, label_color)
+    def initialize(octokit, organization, tagged_pulls, contributors, hostname, github_hostname, github_verifier, label_name, label_color)
       @octokit         = octokit
+      @organization    = organization
       @tagged_pulls    = tagged_pulls
       @contributors    = contributors
       @hostname        = hostname
@@ -78,6 +79,9 @@ module CLA
     end
 
     def collaborator?(user, repo, login)
+      if @organization && @octokit.organization_member?(@organization, @login)
+        return true
+      end
       @octokit.collaborator?("#{user}/#{repo}", login)
     end
 

@@ -58,6 +58,7 @@ module CLA; extend self
           access_token: ENV['GITHUB_ACCESS_TOKEN'],
           api_endpoint: ENV['GITHUB_API_ENDPOINT'] || 'https://api.github.com/'
         ),
+        ENV['GITHUB_ORGANIZATION'],
         sequel[:tagged_pulls],
         sequel[:contributors],
         ENV['HOSTNAME'],
